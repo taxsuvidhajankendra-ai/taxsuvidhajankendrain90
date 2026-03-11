@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FileText, BarChart3, Calculator, Receipt, CreditCard, Fingerprint } from "lucide-react";
+import { FileText, BarChart3, Calculator, Receipt, CreditCard, Fingerprint, Building2, MessageSquare } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const services = [
@@ -44,6 +44,20 @@ const services = [
     titleHi: "आधार सेवाएँ",
     description: "Aadhaar enrollment, update, correction and Aadhaar-PAN linking services.",
     color: "bg-navy-light text-primary",
+  },
+  {
+    icon: Building2,
+    title: "Business Registration",
+    titleHi: "व्यापार पंजीकरण",
+    description: "Complete business registration including company incorporation and MSME registration.",
+    color: "bg-saffron-light text-secondary",
+  },
+  {
+    icon: MessageSquare,
+    title: "Tax Consultation",
+    titleHi: "कर परामर्श",
+    description: "Expert tax consultation for individuals and businesses with personalized advice.",
+    color: "bg-india-green-light text-accent",
   },
 ];
 

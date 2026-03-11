@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { Mail, Phone, MapPin, Facebook, Instagram } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -54,19 +54,16 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-2 text-sm opacity-80">
                 <Phone className="h-4 w-4 shrink-0" />
-                +91 XXXXX XXXXX
-              </li>
-              <li className="flex items-start gap-2 text-sm opacity-80">
-                <MapPin className="h-4 w-4 shrink-0 mt-0.5" />
-                Your Office Address, City, State
+                +91 98917 69507
               </li>
             </ul>
             <div className="flex items-center gap-3 mt-4">
-              {[Facebook, Twitter, Instagram, Linkedin].map((Icon, i) => (
-                <a key={i} href="#" className="p-2 rounded-lg bg-primary-foreground/10 hover:bg-primary-foreground/20 transition-colors">
-                  <Icon className="h-4 w-4" />
-                </a>
-              ))}
+              <a href="https://www.instagram.com/taxsuvidhaofficial/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-primary-foreground/10 hover:bg-primary-foreground/20 transition-colors">
+                <Instagram className="h-4 w-4" />
+              </a>
+              <a href="https://www.facebook.com/profile.php?id=61584777467827" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-primary-foreground/10 hover:bg-primary-foreground/20 transition-colors">
+                <Facebook className="h-4 w-4" />
+              </a>
             </div>
           </div>
         </div>
