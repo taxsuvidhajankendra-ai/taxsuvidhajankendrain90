@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { FileText, BarChart3, Calculator, Receipt, CreditCard, Fingerprint, CheckCircle } from "lucide-react";
+import { FileText, BarChart3, Calculator, Receipt, CreditCard, Fingerprint, CheckCircle, Building2, MessageSquare, Palette, Globe } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
