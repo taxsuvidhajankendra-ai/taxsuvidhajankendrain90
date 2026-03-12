@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, Facebook, Instagram } from "lucide-react";
+import { Mail, Phone, Facebook, Instagram } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -58,11 +58,14 @@ const Footer = () => {
               </li>
             </ul>
             <div className="flex items-center gap-3 mt-4">
-              <a href="https://www.instagram.com/taxsuvidhaofficial/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-primary-foreground/10 hover:bg-primary-foreground/20 transition-colors">
+              <a href="https://www.instagram.com/taxsuvidhaofficial/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-primary-foreground/10 hover:bg-primary-foreground/20 transition-colors" aria-label="Instagram">
                 <Instagram className="h-4 w-4" />
               </a>
-              <a href="https://www.facebook.com/profile.php?id=61584777467827" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-primary-foreground/10 hover:bg-primary-foreground/20 transition-colors">
+              <a href="https://www.facebook.com/profile.php?id=61584777467827" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-primary-foreground/10 hover:bg-primary-foreground/20 transition-colors" aria-label="Facebook">
                 <Facebook className="h-4 w-4" />
+              </a>
+              <a href="https://wa.me/919891769507" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-primary-foreground/10 hover:bg-primary-foreground/20 transition-colors" aria-label="WhatsApp">
+                <Phone className="h-4 w-4" />
               </a>
             </div>
           </div>
