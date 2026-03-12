@@ -9,24 +9,18 @@ const packages = [
   {
     name: "Individual",
     nameHi: "व्यक्तिगत",
-    price: "₹499",
-    period: "/year",
     features: ["ITR Filing (Salaried)", "PAN-Aadhaar Linking", "Basic Tax Planning", "Email Support"],
     popular: false,
   },
   {
     name: "Business",
     nameHi: "व्यवसाय",
-    price: "₹2,999",
-    period: "/year",
     features: ["GST Registration", "Monthly GST Filing", "ITR Filing (Business)", "TDS Returns", "Dedicated Support"],
     popular: true,
   },
   {
     name: "Enterprise",
     nameHi: "उद्यम",
-    price: "₹9,999",
-    period: "/year",
     features: ["All Business Features", "Multiple GSTIN Support", "Audit Assistance", "Priority Processing", "Dedicated Manager"],
     popular: false,
   },
@@ -38,8 +32,8 @@ const Pricing = () => (
     <main>
       <section className="bg-hero-gradient text-primary-foreground py-16">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-3xl md:text-4xl font-bold mb-2">Simple, Transparent Pricing</h1>
-          <p className="text-lg opacity-80">No hidden charges. Pay only for what you need.</p>
+          <h1 className="text-3xl md:text-4xl font-bold mb-2">Our Plans</h1>
+          <p className="text-lg opacity-80">Choose the right plan for your needs. Contact us for pricing.</p>
         </div>
       </section>
 
@@ -53,7 +47,7 @@ const Pricing = () => (
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className={`bg-card rounded-xl border shadow-card p-6 relative ${
+                className={`group bg-card rounded-2xl border shadow-card p-6 relative hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 ${
                   pkg.popular ? "border-secondary ring-2 ring-secondary/20" : "border-border"
                 }`}
               >
@@ -63,11 +57,7 @@ const Pricing = () => (
                   </span>
                 )}
                 <h3 className="text-xl font-bold text-foreground">{pkg.name}</h3>
-                <p className="text-sm font-hindi text-muted-foreground mb-4">{pkg.nameHi}</p>
-                <div className="mb-6">
-                  <span className="text-3xl font-bold text-foreground">{pkg.price}</span>
-                  <span className="text-muted-foreground text-sm">{pkg.period}</span>
-                </div>
+                <p className="text-sm font-hindi text-muted-foreground mb-6">{pkg.nameHi}</p>
                 <ul className="space-y-2.5 mb-6">
                   {pkg.features.map((f) => (
                     <li key={f} className="flex items-center gap-2 text-sm text-foreground">
@@ -84,7 +74,7 @@ const Pricing = () => (
                       : "bg-primary text-primary-foreground"
                   }`}
                 >
-                  Get Started
+                  Contact for Pricing
                 </Link>
               </motion.div>
             ))}
