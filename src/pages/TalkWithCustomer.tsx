@@ -436,18 +436,20 @@ const TalkWithCustomer = () => {
     <div className="min-h-screen bg-muted/30">
       {/* Header */}
       <header className="bg-card border-b border-border sticky top-0 z-10">
-        <div className="max-w-7xl mx-auto px-4 md:px-6 py-4">
+        <div className="h-1 bg-tricolor-bar w-full" />
+        <div className="max-w-7xl mx-auto px-4 md:px-6 py-3">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
-            <div>
-              <h1 className="text-xl font-bold text-foreground flex items-center gap-2.5">
-                <div className="p-2 rounded-xl bg-primary text-primary-foreground">
-                  <Users className="h-5 w-5" />
-                </div>
-                Talk With Customer
-              </h1>
-              <p className="text-sm text-muted-foreground mt-0.5">
-                Service Dashboard · <span className="font-medium capitalize text-secondary">{userRole}</span>
-              </p>
+            <div className="flex items-center gap-3">
+              <img src={logo} alt="Tax Suvidha Jan Kendra" className="h-10 w-10 rounded-lg object-contain" />
+              <div>
+                <h1 className="text-lg font-bold text-foreground flex items-center gap-2">
+                  <Users className="h-4 w-4 text-secondary" />
+                  Talk With Customer
+                </h1>
+                <p className="text-xs text-muted-foreground">
+                  Tax Suvidha Jan Kendra · <span className="font-medium capitalize text-secondary">{userRole}</span>
+                </p>
+              </div>
             </div>
             <div className="flex items-center gap-2">
               <button onClick={loadSubmissions} className="p-2.5 rounded-xl border border-input hover:bg-muted transition-colors" title="Refresh">
