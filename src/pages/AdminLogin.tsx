@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { Lock, Mail } from "lucide-react";
+import logo from "@/assets/logo.jpg";
 
 const ALLOWED_ADMIN_EMAILS = [
   "taxsuvdhajankendra@gmail.com",
@@ -60,9 +61,7 @@ const AdminLogin = () => {
     <div className="min-h-screen flex items-center justify-center bg-muted/30 px-4">
       <div className="w-full max-w-md bg-card border border-border rounded-2xl shadow-card p-8">
         <div className="text-center mb-8">
-          <div className="w-14 h-14 rounded-2xl bg-primary flex items-center justify-center mx-auto mb-4">
-            <Lock className="h-6 w-6 text-primary-foreground" />
-          </div>
+          <img src={logo} alt="Tax Suvidha Jan Kendra" className="h-16 w-16 rounded-2xl object-contain mx-auto mb-3" />
           <h1 className="text-2xl font-bold text-foreground">Admin Login</h1>
           <p className="text-sm text-muted-foreground mt-1">Tax Suvidha Jan Kendra — Secure Access</p>
         </div>
