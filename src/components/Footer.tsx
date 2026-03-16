@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, Facebook, Instagram } from "lucide-react";
+import logo from "@/assets/logo.jpg";
 
 const Footer = () => {
   return (
@@ -9,7 +10,10 @@ const Footer = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* About */}
           <div>
-            <h3 className="text-lg font-bold mb-4">Tax Suvidha Jan Kendra</h3>
+            <div className="flex items-center gap-2 mb-4">
+              <img src={logo} alt="Tax Suvidha Jan Kendra" className="h-10 w-10 rounded-lg object-contain bg-white/10" />
+              <h3 className="text-lg font-bold">Tax Suvidha Jan Kendra</h3>
+            </div>
             <p className="text-sm opacity-80 leading-relaxed mb-4">
               Your trusted partner for all tax & government services. Reliable, legal & transparent.
             </p>
@@ -22,7 +26,7 @@ const Footer = () => {
           <div>
             <h4 className="text-sm font-semibold uppercase tracking-wider mb-4 opacity-70">Quick Links</h4>
             <ul className="space-y-2">
-              {["Home", "Services", "About", "Pricing", "Contact"].map((link) => (
+              {["Home", "Services", "About", "Contact"].map((link) => (
                 <li key={link}>
                   <Link to={link === "Home" ? "/" : `/${link.toLowerCase()}`} className="text-sm opacity-80 hover:opacity-100 transition-opacity">
                     {link}
@@ -50,7 +54,11 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-sm opacity-80">
                 <Mail className="h-4 w-4 shrink-0" />
-                taxsuvidhajankendra@gmail.com
+                taxsuvdhajankendra@gmail.com
+              </li>
+              <li className="flex items-center gap-2 text-sm opacity-80">
+                <Mail className="h-4 w-4 shrink-0" />
+                infotaxsuvidhajankendra@gmail.com
               </li>
               <li className="flex items-center gap-2 text-sm opacity-80">
                 <Phone className="h-4 w-4 shrink-0" />
