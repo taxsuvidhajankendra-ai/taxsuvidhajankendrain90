@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 215 50% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 50% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 50% 15%;
+
+    --primary: 215 70% 22%;          /* Navy */
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 215 65% 35%;
+
+    --secondary: 210 30% 96%;
+    --secondary-foreground: 215 50% 15%;
+
+    --muted: 210 30% 96%;
+    --muted-foreground: 215 15% 45%;
+
+    --accent: 27 95% 55%;             /* Saffron */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 75% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 215 20% 90%;
+    --input: 215 20% 90%;
+    --ring: 215 70% 22%;
+
+    --saffron: 27 95% 55%;
+    --india-green: 130 80% 28%;
+    --navy: 215 70% 22%;
+
+    --radius: 0.625rem;
+  }
+
+  * { @apply border-border; }
+  html { scroll-behavior: smooth; }
+  body { @apply bg-background text-foreground font-sans antialiased; }
+  h1, h2, h3, h4 { @apply font-bold tracking-tight; }
+}
+
+@layer utilities {
+  .tricolor-bar {
+    background: linear-gradient(to right,
+      hsl(var(--saffron)) 0%, hsl(var(--saffron)) 33.3%,
+      #ffffff 33.3%, #ffffff 66.6%,
+      hsl(var(--india-green)) 66.6%, hsl(var(--india-green)) 100%);
+  }
+  .gradient-hero {
+    background: linear-gradient(135deg, hsl(var(--navy)) 0%, hsl(215 65% 28%) 100%);
+  }
+}
