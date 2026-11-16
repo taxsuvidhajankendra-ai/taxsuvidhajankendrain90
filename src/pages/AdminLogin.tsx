@@ -14,7 +14,7 @@ export default function AdminLogin() {
     e.preventDefault();
     setLoading(true);
     setTimeout(() => {
-      if (pwd === ADMIN_PASSWORD) {
+      if (pwd.replace(/\s+/g, "").toLowerCase() === ADMIN_PASSWORD) {
         sessionStorage.setItem("admin_ok", "1");
         toast.success("Welcome, Owner 🙏");
         nav("/admin/dashboard");
